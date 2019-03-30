@@ -1,8 +1,18 @@
 package com.circlit.circlit.models;
 
-import java.util.List;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
+import javax.persistence.*;
+import java.util.List;
+import javax.validation.constraints.*;
+
+@Getter
+@Setter
+@ToString
 public class User {
+    @Id
     private int Id;
 
     private String name;
