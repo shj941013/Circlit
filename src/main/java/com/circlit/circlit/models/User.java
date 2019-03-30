@@ -3,6 +3,7 @@ package com.circlit.circlit.models;
 import java.util.List;
 
 public class User {
+    
     private int Id;
 
     private String name;
