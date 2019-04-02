@@ -11,25 +11,12 @@ import java.util.List;
 @Setter
 @ToString
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="user_id")
-    private int Id;
-
-    @NotNull
-    @Column(name="name")
-    private String name;
-
-    @NotNull
-    @Column(name="age")
-    private int age;
-
-    @NotNull @Email
-    @Column(name="email")
-    private String email;
+    @Column(name = "user_id")
+    private long Id;
 
     @NotNull
     @Column(name="user_name")
@@ -39,8 +26,19 @@ public class User {
     @Column(name="password")
     private String password;
 
-    private List<User> follwers;
+    @NotNull
+    @Column(name="first_name")
+    private String firstName;
 
-    private List<User> follwing;
+    @NotNull
+    @Column(name="last_name")
+    private String lastName;
 
+    @NotNull
+    @Column(name="age")
+    private int age;
+
+    @NotNull @Email
+    @Column(name="email")
+    private String email;
 }

@@ -12,6 +12,4 @@ public interface UserRepository extends CrudRepository <User, Integer> {
     boolean existByEmail(String email);
     Optional<User> getUserByUsername(String username);
     Optional<User> getUserByEmail(String email);
-    boolean addFollwers(User user, User follower);
-    boolean removeFollowers(User user, User follower);
 }
