@@ -1,5 +1,6 @@
 package com.circlit.models;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,14 +12,18 @@ import java.io.Serializable;
 @Setter
 @NoArgsConstructor
 @Entity
+@Table(name = "profiles")
+@Data
 public class Profiles implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private long Id;
 
-//    @OneToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "user_id")
-    private long user_id;
+    @OneToOne
+    @JoinColumn
+    @MapsId
+    private User user;
 
 //    TODO: add more later e.g: Description, maybe where he was born?
 

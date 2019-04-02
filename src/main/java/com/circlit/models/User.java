@@ -1,9 +1,6 @@
 package com.circlit.models;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -15,6 +12,7 @@ import java.io.Serializable;
 @ToString
 @NoArgsConstructor
 @Entity
+@Data
 public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,4 +42,7 @@ public class User implements Serializable {
     @NotNull @Email
     @Column(name="email")
     private String email;
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private Profiles profiles;
 }
