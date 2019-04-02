@@ -16,8 +16,8 @@ public class Profiles implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long Id;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
+//    @OneToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "user_id")
     private long user_id;
 
 //    TODO: add more later e.g: Description, maybe where he was born?
