@@ -1,6 +1,6 @@
-package com.circlit.circlit.repositories;
+package com.circlit.repositories;
 
-import com.circlit.circlit.models.User;
+import com.circlit.models.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

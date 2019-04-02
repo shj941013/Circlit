@@ -1,18 +1,21 @@
-package com.circlit.circlit.models;
+package com.circlit.models;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
-import java.util.List;
+import java.io.Serializable;
 
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
 @Entity
-public class User {
+public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
