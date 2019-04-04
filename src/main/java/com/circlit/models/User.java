@@ -1,6 +1,7 @@
 package com.circlit.models;
 
 import lombok.*;
+import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -17,7 +18,7 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
-    private long Id;
+    private long id;
 
     @NotNull
     @Column(name="user_name")
@@ -42,7 +43,4 @@ public class User implements Serializable {
     @NotNull @Email
     @Column(name="email")
     private String email;
-
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-    private Profiles profiles;
 }

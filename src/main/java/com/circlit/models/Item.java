@@ -21,14 +21,16 @@ public class Item implements Serializable {
     @Column(name = "item_id")
     private long id;
 
-    @NotNull
-//    @Column(name="user_of_the_item")
+    @ManyToOne
+    @JoinColumn
     private User user;
+
     @NotNull
-//    @Column(name = "content")
+    @Column(name = "content")
     private String content;
+
     @NotNull
-//    @Column(name = "time")
+    @Column(name = "time")
     private Time time;
 
 

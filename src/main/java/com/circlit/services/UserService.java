@@ -18,8 +18,15 @@ public class UserService {
     }
 
     public void createUser(User user) {
+        //TODO: check whether the user already exists
         userRepository.save(user);
     }
 
+
+    public void changePassword(User user, String newPassword) {
+        //TODO: have this check with the current password and if so change it to new password
+        //TODO: implement this....
+        userRepository.save(user);
+    }
 
 }
